@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+    --background--color-700: #09203e;
+    --background--color-900: #051325;
+    --background--color-600: #0b294f;
+    --background--transparent: rgba(0, 0, 0, 0);
+    --text--color-white: #fff;
+    --text--color-300: #5c728e;
+    --text--color-100: #b4becb;
+    --text--color-200: #8f9eb2;
+    --border--color-300: #5c728e;
+    --border--color-400: #3d5779;
+    --border--color-main: #8f9eb2;
+    --primary-color: #dd3842;
+    --primary-color-300: #e87a80;
+    --secondary-color: #2b38d1;
+    --star--color: #fdbf60;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--background--color-900);
+    color: var(--text--color-white);
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100vh;
+    width: 100vw;
+}
+a {
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    object-fit: cover;
+}
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.w-input:focus {
+    border-color: #3898ec;
+    outline: 0;
+}
+.text-12px {
+    color: var(--text--color-100);
+    font-family: Open Sans, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+}
+
+._24px-img {
+    width: 24px;
+    height: 24px;
+}
+._20px-img {
+    width: 20px;
+    height: 20px;
+}
+._16px-img {
+    width: 16px;
+    height: 16px;
+}
+.g-12 {
+    column-gap: 12px;
+    row-gap: 12px;
+}
+.g-30 {
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.white-color {
+    color: var(--text--color-white);
+}
+._1px-width-divider {
+    background-color: var(--border--color-main);
+    width: 1px;
+    height: 21px;
+}
+._1px-height-devider {
+    background-color: var(--border--color-main);
+    height: 1px;
+    width: 100%;
+}
+._14px-text-uppercase {
+    color: var(--text--color-100);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+._16px-img {
+    width: 16px;
+    height: 16px;
+}
+._20px-bold-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.nav-link {
+    color: var(--text--color-100);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+.text-semibold {
+    color: var(--text--color-100);
+    font-weight: 500;
+}

@@ -78,5 +78,5 @@ window.addEventListener('load', () => {
     // set time để loading
     setTimeout(() => {
         preloader.style.display = 'none';
-    }, 3000);
+    }, 1000);
 });

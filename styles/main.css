@@ -699,7 +699,27 @@
     width: 30px;
     height: 30px;
 }
-
+.float-button {
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    top: auto;
+    left: auto;
+    height: 50px;
+    width: 50px;
+    background-color: #0a7cff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.overload {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
 /*Dành cho điện thoại */
 @media only screen and (max-width: 768px) {
     [class*='col-'] {

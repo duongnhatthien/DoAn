@@ -3,6 +3,7 @@
 :root {
     --background--color-700: #09203e;
     --background--color-900: #051325;
+    --background--color-400: #3d5779;
     --background--color-600: #0b294f;
     --background--transparent: rgba(0, 0, 0, 0);
     --text--color-white: #fff;
@@ -103,6 +104,11 @@ ul {
     margin-bottom: 0;
     font-size: 20px;
     font-weight: 600;
+}
+._18px-title {
+    color: var(--text--color-white);
+    font-size: 18px;
+    font-weight: 500;
 }
 .nav-link {
     color: var(--text--color-100);

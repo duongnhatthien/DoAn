@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/favicon/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/images/favicon/site.webmanifest" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <title>Shopper NPDK</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="header_logo d-flex space-between">
+                            <a href="index.html">
+                                <img
+                                    src="./images/logo.png"
+                                    alt="Logo"
+                                    class="img_logo"
+                                    height="50px" />
+                            </a>
+                            <div class="header_social-show-in-mobile">
+                                <img
+                                    src="./images/layout/bag_icon.webp"
+                                    alt="bag_icon"
+                                    class="_24px-img" />
+                                <img
+                                    src="./images/layout/user_login_icon.webp"
+                                    alt="User"
+                                    class="_24px-img" />
+
+                                <div class="amount-product">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="header_searchbar d-flex center-block">
+                            <form action="" class="searchbar_form">
+                                <input
+                                    type="search"
+                                    placeholder="What are you looking for?"
+                                    class="search-bar w-input" />
+                                <div class="search-button d-flex center-block">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div
+                            class="header_social d-flex center-block g-30 hide-in-mobile">
+                            <div
+                                class="header_social-account d-flex center-block g-12">
+                                <img
+                                    src="./images/layout/user_login_icon.webp"
+                                    alt="User"
+                                    class="_24px-img" />
+                                <div class="flex-column header_action-login">
+                                    <a href="login.html" class="text-12px">
+                                        Login
+                                    </a>
+                                    <a
+                                        href="login.html"
+                                        class="white-color hide-in-mobile">
+                                        Account
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div
+                                class="header_social-cart d-flex center-block g-12 hide-in-mobile">
+                                <img
+                                    src="./images/layout/bag_icon.webp"
+                                    alt="bag_icon"
+                                    class="_24px-img" />
+                                <div class="flex-column">
+                                    <a href="#" class="text-12px">Your cart</a>
+                                </div>
+                                <div class="amount-product">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="row space-between g-30">
+                    <div class="d-flex category-dropdown space-between">
+                        <div class="category-dropdown__button d-flex">
+                            <img
+                                src="./images/layout/categories_icon.webp"
+                                alt="Categories icon"
+                                class="_20px-img" />
+                            <div class="_14px-text-uppercase">
+                                Browse All Categories
+                            </div>
+                        </div>
+                        <div class="category-dropdown__list">
+                            <ul
+                                class="product-categories-vertical-dropdown-block">
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/watch_icon.png"
+                                        alt="Watch"
+                                        class="_16px-img" />
+                                    <a href="#">Watch</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/speaker_icon.png"
+                                        alt="Speaker"
+                                        class="_16px-img" />
+                                    <a href="#">Speaker</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/mouse_icon.png"
+                                        alt="Mouse"
+                                        class="_16px-img" />
+                                    <a href="#">Mouse</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/monitor_icon.png"
+                                        alt="Monitor"
+                                        class="_16px-img" />
+                                    <a href="#">Monitor</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/mobile_icon.png"
+                                        alt="Mobile"
+                                        class="_16px-img" />
+                                    <a href="#">Mobile</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/Laptop_icon.png"
+                                        alt="Laptop"
+                                        class="_16px-img" />
+                                    <a href="#">Laptop</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/keyboard_icon.png"
+                                        alt="Keyboard"
+                                        class="_16px-img" />
+                                    <a href="#">Keyboard</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/headphones_icon.png"
+                                        alt="Headphone"
+                                        class="_16px-img" />
+                                    <a href="#">Headphone</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/earbuds_con.png"
+                                        alt="Earbuds"
+                                        class="_16px-img" />
+                                    <a href="#">Earphone</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/camera_icon.png"
+                                        alt="Camera"
+                                        class="_16px-img" />
+                                    <a href="#">Camera</a>
+                                </li>
+                                <li class="category-dropdown__item">
+                                    <img
+                                        src="./images/layout/Accesories_icon.png"
+                                        alt="Accesories"
+                                        class="_16px-img" />
+                                    <a href="#">Accesories</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div
+                            class="category-dropdown__list-with-button hide-in-destop">
+                            <ul
+                                class="product-categories-vertical-dropdown-block-with-button">
+                                <li class="category-dropdown-with-button__item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="category-dropdown-with-button__item">
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li class="category-dropdown-with-button__item">
+                                    <a href="#">Pages</a>
+                                </li>
+                                <li class="category-dropdown-with-button__item">
+                                    <a href="#">Shop</a>
+                                </li>
+                                <li class="category-dropdown-with-button__item">
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li class="category-dropdown-with-button__item">
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="meun-button hide-in-destop">
+                            <i
+                                id="barmenu-button"
+                                class="fa-solid fa-bars"
+                                style="display: block"></i>
+                            <i
+                                id="cancelmenu-button"
+                                class="fa-solid fa-xmark"
+                                style="display: none"></i>
+                        </div>
+                    </div>
+                    <div class="_1px-width-divider hide-in-mobile"></div>
+                    <div class="navbar-menu hide-in-mobile">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="_1px-width-divider hide-in-mobile"></div>
+                    <div
+                        class="d-flex navbar-wrapper-phone-and-email d-flex g-30 hide-in-mobile">
+                        <div class="flex-row-with-7px-gap">
+                            <img
+                                src="./images/layout/phone-call 2.svg"
+                                alt="Call"
+                                class="_16px-img" />
+                            <div class="text-semibold">
+                                Call: (123) 123-4567
+                            </div>
+                        </div>
+                        <div class="flex-row-with-7px-gap">
+                            <img
+                                src="./images/layout/letter-icon_1.svg"
+                                alt="Mail" />
+                            <div class="text-semibold">
+                                Email: example@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="product-imgages-slide">
+                            <div class="product-images-display">
+                                <img
+                                    src="./images/products/TNC Gaming Headphone.png"
+                                    alt=""
+                                    class="image-display" />
+                            </div>
+                            <div class="product-imgages-choice">
+                                <img
+                                    src="./images/product-detail/img1.png"
+                                    alt=""
+                                    class="product-imgages-choice__item" />
+                                <img
+                                    src="./images/product-detail/img2.png"
+                                    alt=""
+                                    class="product-imgages-choice__item" />
+                                <img
+                                    src="./images/product-detail/img3.png"
+                                    alt=""
+                                    class="product-imgages-choice__item" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-detail-block">
+                            <div class="product-detail-title">
+                                TNC Gaming Headphone
+                            </div>
+                            <div class="product-detail-vote">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="product-detail-price">
+                                <div class="product-detail-price__discount">
+                                    $ 100.00 USD
+                                </div>
+                                <div
+                                    class="_1px-width-divider hide-in-mobile"></div>
+                                <div class="product-detail-price__old">
+                                    $ 120.00 USD
+                                </div>
+                            </div>
+                            <p class="product-detail-description">
+                                Effect font move vertical share. Connection
+                                frame edit export arrow. Undo device move
+                                opacity image layer. List star blur
+                                strikethrough arrow.
+                            </p>
+                            <div class="product-detail-footer">
+                                <input
+                                    type="number"
+                                    class="product-detail-amount"
+                                    min="1" />
+                                <button class="product-detail-button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="product-detail-meta">
+                                <div class="meta-info-title">Share:</div>
+                                <div class="social-share-icon-container">
+                                    <img
+                                        src="./images/social-icon/icons8-facebook-96.png"
+                                        alt="Facebook icon"
+                                        class="social-icon" />
+                                    <img
+                                        src="./images/social-icon/icons8-twitter-96.png"
+                                        alt="Twitter icon"
+                                        class="social-icon" />
+                                    <img
+                                        src="./images/social-icon/icons8-pinterest-96.png"
+                                        alt="Pinterest icon"
+                                        class="social-icon" />
+                                </div>
+                            </div>
+                            <div class="product-detail-payment">
+                                <div class="_18px-title">Payment Method:</div>
+                                <div class="product-detail-payment-method">
+                                    <img
+                                        src="https://assets-global.website-files.com/65fd584b6e6336bd0392e213/65fd584b6e6336bd0392e2c4_visa%201.webp"
+                                        loading="lazy"
+                                        alt=""
+                                        class="_30px-image" />
+                                    <img
+                                        src="https://assets-global.website-files.com/65fd584b6e6336bd0392e213/65fd584b6e6336bd0392e2c3_discover%201.webp"
+                                        loading="lazy"
+                                        alt=""
+                                        class="_30px-image" />
+                                    <img
+                                        src="https://assets-global.website-files.com/65fd584b6e6336bd0392e213/65fd584b6e6336bd0392e2c2_paypal%201.webp"
+                                        loading="lazy"
+                                        alt=""
+                                        class="_30px-image" />
+                                    <img
+                                        src="https://assets-global.website-files.com/65fd584b6e6336bd0392e213/65fd584b6e6336bd0392e2c1_american-express%201.webp"
+                                        loading="lazy"
+                                        alt=""
+                                        class="_30px-image" />
+                                    <img
+                                        src="https://assets-global.website-files.com/65fd584b6e6336bd0392e213/65fd584b6e6336bd0392e2c0_card%201.webp"
+                                        loading="lazy"
+                                        alt=""
+                                        class="_30px-image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-copyright">
+                    Copyright © 2024 Shopper NPDK
+                    <div class="_1px-width-divider hide-in-mobile"></div>
+                    <a href="#" class="footer-copyright">
+                        Designed by Nguyễn Phạm Đăng Khoa
+                    </a>
+                    <div class="_1px-width-divider hide-in-mobile"></div>
+                    <a href="#" target="_blank" class="footer-copyright">
+                        Powered by Webflow
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="./scripts/main.js"></script>
+    </body>
+</html>

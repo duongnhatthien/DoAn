@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/login.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/favicon/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/images/favicon/site.webmanifest" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="users-form-wrapper">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="users-page-img hide-in-mobile">
+                            <img src="./images/login-page.webp" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="users-form-loginform">
+                            <form action="" class="users-form">
+                                <div class="users-form-userformheader">
+                                    <h2>Sign up</h2>
+                                </div>
+                                <div class="users-form-group">
+                                    <label for="Email" class="user-form-label">
+                                        Email
+                                    </label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        placeholder="Email"
+                                        class="users-form-inputfield" />
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="users-form-group">
+                                    <label for="phone" class="users-form-label">
+                                        Phone
+                                    </label>
+                                    <input
+                                        id="phone"
+                                        type="tel"
+                                        class="users-form-inputfield" />
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="users-form-group">
+                                    <label
+                                        for="Password"
+                                        class="user-form-label">
+                                        Password
+                                    </label>
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        class="users-form-inputfield"
+                                        placeholder="Password " />
+                                    <span class="form-message"></span>
+                                </div>
+                                <input
+                                    type="submit"
+                                    class="users-form-button"
+                                    value="Log in" />
+                                <div class="users-form-footer">
+                                    <a href="#" class="primary-color">
+                                        Forgot your Password?
+                                    </a>
+                                    <div style="color: white">
+                                        Already have an account?
+                                        <a
+                                            href="login.html"
+                                            class="primary-color">
+                                            Log in
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./scripts/validator.js"></script>
+        <script>
+            Validator({
+                form: '.users-form',
+                rules: [
+                    Validator.isRequire('#email'),
+                    Validator.isRequire('#phone'),
+                    Validator.isRequire('#password'),
+                    Validator.isEmail('#email'),
+                    Validator.isPasswordStrong('#password'),
+                    Validator.isVietnamesePhoneNumber('#phone'),
+                ],
+            });
+        </script>
+    </body>
+</html>

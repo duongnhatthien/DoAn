@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.users-page-img {
+    height: 100%;
+}
+.users-page-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.users-form-wrapper {
+    display: flex;
+    width: 930px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.users-form-loginform {
+    background-color: var(--background--color-600);
+    flex: 1;
+    height: 100%;
+    padding: 33px 65px 60px;
+    border-radius: 0px 10px 10px 0px;
+}
+.users-form-userformheader {
+    margin-bottom: 20px;
+}
+.users-form-userformheader > h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+.users-form-group {
+    width: 100%;
+}
+.user-form-label {
+    color: var(--text--color-white);
+    margin-bottom: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.users-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+.users-form-group {
+    margin-bottom: 16px;
+}
+.form-message {
+    font-size: 12px;
+    color: red;
+    display: block;
+    height: 12px;
+}
+.users-form-inputfield {
+    border: 1px solid var(--background--color-400);
+    border-radius: 4px;
+    background-color: var(--background-tranparent);
+    color: var(--text--color-white);
+    min-height: 54px;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+.users-form-inputfield.invalid {
+    border: 1px solid red;
+}
+.users-form-button {
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--text--color-white);
+    outline: none;
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 0px;
+    padding: 16px 34px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s, background 0.5s;
+}
+.users-form-button:hover {
+    cursor: pointer;
+    color: #fdcb71;
+    background-color: #2f19b5;
+}
+.users-form-button.disable:hover {
+    cursor: not-allowed;
+    color: var(--text--color-white);
+}
+.users-form-button.disable {
+    background-color: gray;
+    cursor: not-allowed;
+}
+.users-form-footer {
+    display: flex;
+    gap: 8px;
+    color: var(--text--color-white);
+    flex-direction: column;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.primary-color {
+    color: var(--primary-color);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 12 cột responsive */
+.col-1 {
+    width: 8.33%;
+    flex: 0 0;
+}
+.col-2 {
+    width: 16.66%;
+    flex: 16.66%;
+}
+.col-3 {
+    width: 25%;
+    flex: 25%;
+}
+.col-4 {
+    width: 33.33%;
+    flex: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+    flex: 41.66%;
+}
+.col-6 {
+    width: 50%;
+    flex: 50%;
+}
+.col-7 {
+    width: 58.33%;
+    flex: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+    flex: 66.66%;
+}
+.col-9 {
+    width: 75%;
+    flex: 75%;
+}
+.col-10 {
+    width: 83.33%;
+    flex: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+    flex: 91.66%;
+}
+.col-12 {
+    width: 100%;
+    flex: 100%;
+}
+@media only screen and (max-width: 768px) {
+    [class*='col-'] {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+    .hide-in-mobile {
+        display: none;
+    }
+    .users-form-loginform {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+    }
+    .users-form-userformheader > h2 {
+        font-size: 24px;
+    }
+}

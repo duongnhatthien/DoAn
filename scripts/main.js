@@ -21,10 +21,6 @@ const buttonsSliderControl = document.querySelectorAll(
     '[class^="button-control-"]'
 );
 const sliders = document.querySelectorAll('.slider-item');
-let screenWidth = window.innerWidth;
-window.addEventListener('resize', function () {
-    screenWidth = window.innerWidth;
-});
 buttonsSliderControl.forEach((button, index) => {
     button.addEventListener('click', function () {
         buttonsSliderControl.forEach((btn) => {
@@ -57,9 +53,22 @@ buttonsSliderControl.forEach((button, index) => {
 });
 
 const productCart = document.querySelectorAll('.product-cart');
-console.log(productCart);
 productCart.forEach((pc) => {
     pc.addEventListener('click', function (e) {
         window.location.href = 'productDetail.html';
+    });
+});
+
+const imgDisplay = document.querySelector('.image-display');
+const productImageChoiceItem = document.querySelectorAll(
+    '.product-imgages-choice__item'
+);
+
+productImageChoiceItem.forEach((item) => {
+    item.addEventListener('click', (event) => {
+        const src = item.getAttribute('src');
+        console.log(src);
+        imgDisplay.setAttribute('src', src);
+        imgDisplay.style.opacity = '1';
     });
 });

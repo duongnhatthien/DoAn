@@ -113,10 +113,10 @@
                 rules: [
                     Validator.isRequire('#email'),
                     Validator.isRequire('#phone'),
+                    Validator.isVietnamesePhoneNumber('#phone'),
                     Validator.isRequire('#password'),
                     Validator.isEmail('#email'),
                     Validator.isPasswordStrong('#password'),
-                    Validator.isVietnamesePhoneNumber('#phone'),
                 ],
             });
         </script>

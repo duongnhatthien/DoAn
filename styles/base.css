@@ -122,3 +122,11 @@ ul {
     color: var(--text--color-100);
     font-weight: 500;
 }
+.loading {
+    background: #000 url(../images/loading.gif) no-repeat center
+        center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}

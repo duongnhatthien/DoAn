@@ -72,3 +72,8 @@ productImageChoiceItem.forEach((item) => {
         imgDisplay.style.opacity = '1';
     });
 });
+
+const preloader = document.querySelector('.loading');
+window.addEventListener('load', () => {
+    preloader.style.display = 'none';
+});

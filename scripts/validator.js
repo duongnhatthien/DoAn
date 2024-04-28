@@ -9,6 +9,7 @@ buttonSubmit.addEventListener('click', function (e) {
         rules: [
             Validator.isRequire('#email'),
             Validator.isRequire('#phone'),
+            Validator.isVietnamesePhoneNumber('#phone'),
             Validator.isRequire('#password'),
             Validator.isEmail('#email'),
             Validator.isPasswordStrong('#password'),
@@ -92,7 +93,7 @@ Validator.isPasswordStrong = function (selector) {
 Validator.isVietnamesePhoneNumber = function (selector) {
     return {
         selector,
-        test: function () {
+        test: function (number) {
             return /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/.test(number)
                 ? undefined
                 : 'Phone incorect';

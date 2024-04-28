@@ -21,8 +21,10 @@ const buttonsSliderControl = document.querySelectorAll(
     '[class^="button-control-"]'
 );
 const sliders = document.querySelectorAll('.slider-item');
-const screenWidth = window.innerWidth;
-console.log(screenWidth);
+let screenWidth = window.innerWidth;
+window.addEventListener('resize', function () {
+    screenWidth = window.innerWidth;
+});
 buttonsSliderControl.forEach((button, index) => {
     button.addEventListener('click', function () {
         buttonsSliderControl.forEach((btn) => {
@@ -33,48 +35,31 @@ buttonsSliderControl.forEach((button, index) => {
         });
         this.classList.add('active');
         sliders[index].classList.add('active');
-        if (screenWidth > 768) {
-            switch (index) {
-                case 0:
-                    sliders.forEach(
-                        (s) => (s.style.transform = 'translateX(0px)')
-                    );
-                    break;
-                case 1:
-                    sliders.forEach(
-                        (s) => (s.style.transform = 'translateX(-1180px)')
-                    );
-                    break;
-                case 2:
-                    sliders.forEach(
-                        (s) => (s.style.transform = 'translateX(-2360px)')
-                    );
-                    break;
-                default:
-                    // No transform for other cases (or handle as needed)
-                    break;
-            }
-        } else {
-            switch (index) {
-                case 0:
-                    sliders.forEach(
-                        (s) => (s.style.transform = 'translateX(0px)')
-                    );
-                    break;
-                case 1:
-                    sliders.forEach(
-                        (s) => (s.style.transform = 'translateX(-350px)')
-                    );
-                    break;
-                case 2:
-                    sliders.forEach(
-                        (s) => (s.style.transform = 'translateX(-700px)')
-                    );
-                    break;
-                default:
-                    // No transform for other cases (or handle as needed)
-                    break;
-            }
+        switch (index) {
+            case 0:
+                sliders.forEach((s) => (s.style.transform = 'translateX(0px)'));
+                break;
+            case 1:
+                sliders.forEach(
+                    (s) => (s.style.transform = 'translateX(-100%)')
+                );
+                break;
+            case 2:
+                sliders.forEach(
+                    (s) => (s.style.transform = 'translateX(-200%)')
+                );
+                break;
+            default:
+                // No transform for other cases (or handle as needed)
+                break;
         }
+    });
+});
+
+const productCart = document.querySelectorAll('.product-cart');
+console.log(productCart);
+productCart.forEach((pc) => {
+    pc.addEventListener('click', function (e) {
+        window.location.href = 'productDetail.html';
     });
 });

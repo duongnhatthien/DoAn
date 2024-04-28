@@ -75,5 +75,7 @@ productImageChoiceItem.forEach((item) => {
 
 const preloader = document.querySelector('.loading');
 window.addEventListener('load', () => {
-    preloader.style.display = 'none';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 3000);
 });

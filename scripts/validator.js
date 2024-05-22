@@ -57,11 +57,13 @@ function Validator(options) {
         });
     }
 }
-Validator.isRequire = function (selector) {
+Validator.isRequire = function (selector, name) {
     return {
         selector,
         test: function (value) {
-            return value.trim() == '' ? 'Field not empty' : undefined;
+            return value.trim() == ''
+                ? name + ' không được để trống'
+                : undefined;
         },
     };
 };
@@ -69,8 +71,7 @@ Validator.isEmail = function (selector) {
     return {
         selector,
         test: function (value) {
-            const formatEmail =
-                /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            const formatEmail = /\S+@\S+\.\S+/i;
             return value.toLowerCase().match(formatEmail)
                 ? undefined
                 : 'Email incorect';
@@ -94,9 +95,9 @@ Validator.isVietnamesePhoneNumber = function (selector) {
     return {
         selector,
         test: function (number) {
-            return /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/.test(number)
+            return /^(03|05|07|08|09)\d{8}$/.test(number)
                 ? undefined
-                : 'Phone incorect';
+                : 'Số điện thoại không hợp lệ';
         },
     };
 };

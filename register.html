@@ -47,7 +47,7 @@
                         <div class="users-form-loginform">
                             <form action="" class="users-form">
                                 <div class="users-form-userformheader">
-                                    <h2>Sign up</h2>
+                                    <h2>Đăng kí</h2>
                                 </div>
                                 <div class="users-form-group">
                                     <label for="Email" class="user-form-label">
@@ -89,14 +89,14 @@
                                     value="Log in" />
                                 <div class="users-form-footer">
                                     <a href="#" class="primary-color">
-                                        Forgot your Password?
+                                        Quên mật khẩu ?
                                     </a>
                                     <div style="color: white">
-                                        Already have an account?
+                                        Bạn đã có tài khoản?
                                         <a
                                             href="login.html"
                                             class="primary-color">
-                                            Log in
+                                            đăng nhập
                                         </a>
                                     </div>
                                 </div>
@@ -111,10 +111,10 @@
             Validator({
                 form: '.users-form',
                 rules: [
-                    Validator.isRequire('#email'),
-                    Validator.isRequire('#phone'),
+                    Validator.isRequire('#email', 'email'),
+                    Validator.isRequire('#phone', 'số điện thoại'),
                     Validator.isVietnamesePhoneNumber('#phone'),
-                    Validator.isRequire('#password'),
+                    Validator.isRequire('#password', 'Mật khẩu'),
                     Validator.isEmail('#email'),
                     Validator.isPasswordStrong('#password'),
                 ],

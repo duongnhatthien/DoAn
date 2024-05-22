@@ -1,22 +1,6 @@
 // Menu button responsive
-const barMenuBtn = document.querySelector('#barmenu-button');
-const cancelMenuBtn = document.querySelector('#cancelmenu-button');
-const categoryDropdownWithButton = document.querySelector(
-    '.category-dropdown__list-with-button'
-);
 
-barMenuBtn.addEventListener('click', function (event) {
-    categoryDropdownWithButton.classList.add('active'); // Thêm class 'active' để hiển thị menu
-    cancelMenuBtn.style.display = 'block';
-    event.target.style.display = 'none';
-});
-
-cancelMenuBtn.addEventListener('click', function (event) {
-    categoryDropdownWithButton.classList.remove('active'); // Xóa class 'active' để ẩn menu
-    event.target.style.display = 'none';
-    barMenuBtn.style.display = 'block';
-});
-
+// slide
 const buttonsSliderControl = document.querySelectorAll(
     '[class^="button-control-"]'
 );
@@ -74,9 +58,24 @@ productImageChoiceItem.forEach((item) => {
 });
 
 const preloader = document.querySelector('.loading');
-window.addEventListener('load', () => {
-    // set time để loading
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, 1000);
-});
+// window.addEventListener('load', () => {
+//     // set time để loading
+//     setTimeout(() => {
+//         preloader.style.display = 'none';
+//     }, 1000);
+// });
+openMenuBtn.addEventListener('click', openNav);
+closeMenuBtn.addEventListener('click', closeNav);
+function openNav() {
+    document.querySelector('.slidebar-collapse').style.width = '200px';
+    document.querySelector('.main').style.opacity = '0.8';
+    openMenuBtn.style.display = 'none';
+    closeMenuBtn.style.display = 'block';
+}
+
+function closeNav() {
+    document.querySelector('.slidebar-collapse').style.width = '0px';
+    document.querySelector('.main').style.opacity = '1';
+    openMenuBtn.style.display = 'block';
+    closeMenuBtn.style.display = 'none';
+}

@@ -1,26 +1,51 @@
 const buttonSubmit = document.querySelector('.users-form-button');
+const buttonSend = document.querySelector('.submit-button');
 let cck = false;
-console.log(buttonSubmit);
-buttonSubmit.addEventListener('click', function (e) {
-    e.preventDefault();
-    cck = false;
-    Check({
-        form: '.users-form',
-        rules: [
-            Validator.isRequire('#email'),
-            Validator.isRequire('#phone'),
-            Validator.isVietnamesePhoneNumber('#phone'),
-            Validator.isRequire('#password'),
-            Validator.isEmail('#email'),
-            Validator.isPasswordStrong('#password'),
-        ],
+if (buttonSubmit) {
+    buttonSubmit.addEventListener('click', function (e) {
+        e.preventDefault();
+        cck = false;
+        Check({
+            form: '.users-form',
+            rules: [
+                Validator.isRequire('#email'),
+                Validator.isRequire('#phone'),
+                Validator.isVietnamesePhoneNumber('#phone'),
+                Validator.isRequire('#password'),
+                Validator.isEmail('#email'),
+                Validator.isPasswordStrong('#password'),
+            ],
+        });
+        if (!cck) {
+            window.location.href = 'index.html';
+        } else {
+            alert('Enter all input');
+        }
     });
-    if (!cck) {
-        window.location.href = 'index.html';
-    } else {
-        alert('Enter all input');
-    }
-});
+}
+if (buttonSend) {
+    buttonSend.addEventListener('click', function (e) {
+        e.preventDefault();
+        cck = false;
+        Check({
+            form: '.contact-form__form',
+            rules: [
+                Validator.isRequire('#name', 'Tên'),
+                Validator.isRequire('#email', 'email'),
+                Validator.isRequire('#phone', 'số điện thoại'),
+                Validator.isRequire('#subject', 'chủ đề'),
+                Validator.isRequire('#message', 'nội dung'),
+                Validator.isVietnamesePhoneNumber('#phone'),
+                Validator.isEmail('#email'),
+            ],
+        });
+        if (!cck) {
+            alert('Gửi thư thành công');
+        } else {
+            alert('Enter all input');
+        }
+    });
+}
 function Check(options) {
     const formElement = document.querySelector(options.form);
     if (formElement) {
@@ -40,6 +65,7 @@ function Validator(options) {
     if (formElement) {
         options.rules.forEach((element) => {
             const inputElement = formElement.querySelector(element.selector);
+            console.log(inputElement);
             const formMessage =
                 inputElement.parentElement.querySelector('.form-message');
             if (inputElement) {
@@ -74,7 +100,7 @@ Validator.isEmail = function (selector) {
             const formatEmail = /\S+@\S+\.\S+/i;
             return value.toLowerCase().match(formatEmail)
                 ? undefined
-                : 'Email incorect';
+                : 'Email không đúng định dạng';
         },
     };
 };
@@ -82,12 +108,29 @@ Validator.isPasswordStrong = function (selector) {
     return {
         selector,
         test: function (value) {
-            let regex =
-                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            // Định nghĩa các tiêu chí kiểm tra mật khẩu mạnh
+            const minLength = 8;
+            const hasUpperCase = /[A-Z]/.test(password);
+            const hasLowerCase = /[a-z]/.test(password);
+            const hasNumbers = /[0-9]/.test(password);
+            const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-            return regex.test(value)
-                ? undefined
-                : 'Password is not strong enough';
+            // Kiểm tra độ dài của mật khẩu
+            if (password.length < minLength) {
+                return 'Password phải có ít nhất 8 kí tự';
+            }
+            // Kiểm tra từng tiêu chí
+            if (
+                !hasUpperCase ||
+                !hasLowerCase ||
+                !hasNumbers ||
+                !hasSpecialChars
+            ) {
+                return 'Mật khẩu phải chứa kí tự in hoa, in thường, số, đặt biệt';
+            }
+
+            // Nếu mật khẩu đáp ứng tất cả các tiêu chí, trả về true
+            return undefined;
         },
     };
 };

@@ -20,6 +20,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+iframe {
+    margin: 0;
+    padding: 0;
+    border: none; /* Nếu không muốn có viền */
+}
 body {
     background-color: var(--background--color-900);
     color: var(--text--color-white);
@@ -28,8 +33,22 @@ body {
     overflow-x: hidden;
 }
 a {
-    text-decoration: none;
+    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
+    text-decoration: none; /* Bỏ gạch chân nếu muốn */
 }
+
+a:visited {
+    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
+}
+
+a:hover {
+    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
+}
+
+a:active {
+    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
+}
+
 img {
     vertical-align: middle;
     max-width: 100%;

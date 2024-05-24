@@ -61,12 +61,7 @@
 .users-form-group {
     margin-bottom: 16px;
 }
-.form-message {
-    font-size: 12px;
-    color: red;
-    display: block;
-    height: 12px;
-}
+
 .users-form-inputfield {
     border: 1px solid var(--background--color-400);
     border-radius: 4px;

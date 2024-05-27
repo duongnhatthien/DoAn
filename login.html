@@ -49,24 +49,36 @@
                                 <div class="users-form-userformheader">
                                     <h2>Log in</h2>
                                 </div>
-                                <label for="Email" class="user-form-label">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    placeholder="Email"
-                                    class="users-form-inputfield" />
-                                <label for="Password" class="user-form-label">
-                                    Password
-                                </label>
-                                <input
-                                    type="password"
-                                    class="users-form-inputfield"
-                                    placeholder="Password " />
-                                <input
-                                    type="submit"
-                                    class="users-form-button"
-                                    value="Log in" />
+                                <div class="users-form-group">
+                                    <label for="Email" class="user-form-label">
+                                        Email
+                                    </label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        placeholder="Email"
+                                        class="users-form-inputfield" />
+                                    <span class="form-message"></span>
+                                </div>
+                                <div class="users-form-group">
+                                    <label
+                                        for="Password"
+                                        class="user-form-label">
+                                        Password
+                                    </label>
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        class="users-form-inputfield"
+                                        placeholder="Password " />
+                                    <span class="form-message"></span>
+                                    <input
+                                        type="submit"
+                                        class="users-form-button"
+                                        value="Log in"
+                                        id="loginBtn" />
+                                </div>
+                                <span class="form-message"></span>
                                 <div class="users-form-footer">
                                     <a href="#" class="primary-color">
                                         Quên mật khẩu ?
@@ -87,4 +99,14 @@
             </div>
         </div>
     </body>
+    <script src="./scripts/validator.js"></script>
+    <script>
+        Validator({
+            form: '.users-form',
+            rules: [
+                Validator.isRequire('#email', 'email'),
+                Validator.isRequire('#password', 'mật khẩu'),
+            ],
+        });
+    </script>
 </html>

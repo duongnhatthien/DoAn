@@ -36,34 +36,13 @@ buttonsSliderControl.forEach((button, index) => {
     });
 });
 
-const productCart = document.querySelectorAll('.product-cart');
-productCart.forEach((pc) => {
-    pc.addEventListener('click', function (e) {
-        window.location.href = 'productDetail.html';
-    });
-});
-
-const imgDisplay = document.querySelector('.image-display');
-const productImageChoiceItem = document.querySelectorAll(
-    '.product-imgages-choice__item'
-);
-
-productImageChoiceItem.forEach((item) => {
-    item.addEventListener('click', (event) => {
-        const src = item.getAttribute('src');
-        console.log(src);
-        imgDisplay.setAttribute('src', src);
-        imgDisplay.style.opacity = '1';
-    });
-});
-
 const preloader = document.querySelector('.loading');
-// window.addEventListener('load', () => {
-//     // set time để loading
-//     setTimeout(() => {
-//         preloader.style.display = 'none';
-//     }, 1000);
-// });
+window.addEventListener('load', () => {
+    // set time để loading
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+});
 openMenuBtn.addEventListener('click', openNav);
 closeMenuBtn.addEventListener('click', closeNav);
 function openNav() {

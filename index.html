@@ -35,7 +35,7 @@
         <title>Shop NPDK</title>
     </head>
     <body>
-        <!-- <div class="loading"></div> -->
+        <div class="loading"></div>
         <div class="float-button">
             <i
                 class="fa-brands fa-facebook-messenger"
@@ -44,7 +44,7 @@
         <div class="hide-in-destop slidebar-collapse">
             <div>
                 <div class="sliderbar-logo">
-                    <img src="/images/logo.png" alt="" />
+                    <img src="./images/logo.png" alt="" />
                 </div>
                 <div class="_1px-height-devider"></div>
                 <div class="slidebar_block">
@@ -172,7 +172,7 @@
             </div>
             <nav class="navbar">
                 <div class="container">
-                    <div class="row g-30">
+                    <div class="row g-30 align-items-center">
                         <div class="category-dropdown__button d-flex">
                             <div style="display: flex; gap: 12px">
                                 <img
@@ -260,19 +260,9 @@
                             </div>
                         </div>
 
-                        <div class="meun-button hide-in-destop">
-                            <i
-                                id="openMenuBtn"
-                                class="fa-solid fa-bars"
-                                style="display: block"></i>
-                            <i
-                                id="closeMenuBtn"
-                                class="fa-solid fa-xmark"
-                                style="display: none"></i>
-                        </div>
                         <div
                             class="_1px-width-divider hide-in-mobile hide-in-tablet"></div>
-                        <div class="navbar-menu hide-in-mobile hide-in-tablet">
+                        <div class="navbar-menu hide-in-mobile">
                             <ul class="nav-list">
                                 <li class="nav-item">
                                     <a href="index.html" class="nav-link">
@@ -301,7 +291,7 @@
                         <div
                             class="_1px-width-divider hide-in-mobile hide-in-tablet"></div>
                         <div
-                            class="d-flex navbar-wrapper-phone-and-email d-flex g-30 hide-in-mobile">
+                            class="d-flex navbar-wrapper-phone-and-email d-flex g-30 hide-in-mobile hide-in-tablet">
                             <div class="flex-row-with-7px-gap">
                                 <img
                                     src="./images/layout/phone-call 2.svg"
@@ -319,6 +309,16 @@
                                     Email: example@gmail.com
                                 </div>
                             </div>
+                        </div>
+                        <div class="meun-button hide-in-destop">
+                            <i
+                                id="openMenuBtn"
+                                class="fa-solid fa-bars"
+                                style="display: block"></i>
+                            <i
+                                id="closeMenuBtn"
+                                class="fa-solid fa-xmark"
+                                style="display: none"></i>
                         </div>
                     </div>
                 </div>
@@ -561,176 +561,226 @@
                             </div>
                             <div class="col-9">
                                 <div class="display-product">
-                                    <div class="product-cart">
-                                        <div class="product-img">
-                                            <img
-                                                src="./images/products/TNC Gaming Headphone.png"
-                                                alt="Headphone" />
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-name">
-                                                TNC Gaming Headphone
+                                    <a href="productDetail.html?id=1">
+                                        <div class="product-cart">
+                                            <div class="product-img">
+                                                <img
+                                                    src="./images/products/TNC Gaming Headphone.png"
+                                                    alt="Headphone" />
                                             </div>
-                                            <div class="product-vote">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="product-price">
-                                                <div
-                                                    class="product-price__discount">
-                                                    $ 120.00 USD
+                                            <div class="product-content">
+                                                <div class="product-name">
+                                                    TNC Gaming Headphone
                                                 </div>
-                                                <div
-                                                    class="_1px-width-divider"></div>
-                                                <div class="product-price__old">
-                                                    $ 140.00 USD
+                                                <div class="product-vote">
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
                                                 </div>
-                                            </div>
-                                            <div class="product-button">
-                                                Add to card
-                                            </div>
-                                        </div>
-                                        <div class="product-label">On Sale</div>
-                                    </div>
-                                    <div class="product-cart">
-                                        <div class="product-img">
-                                            <img
-                                                src="./images/products/Digital Bluetooth Speaker.png"
-                                                alt="Headphone" />
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-name">
-                                                Digital Bluetooth Speaker
-                                            </div>
-                                            <div class="product-vote">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="product-price">
-                                                <div
-                                                    class="product-price__discount">
-                                                    $ 100.00 USD
+                                                <div class="product-price">
+                                                    <div
+                                                        class="product-price__discount">
+                                                        $ 120.00 USD
+                                                    </div>
+                                                    <div
+                                                        class="_1px-width-divider"></div>
+                                                    <div
+                                                        class="product-price__old">
+                                                        $ 140.00 USD
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="_1px-width-divider"></div>
-                                                <div class="product-price__old">
-                                                    $ 120.00 USD
+                                                <div class="product-button">
+                                                    Add to card
                                                 </div>
                                             </div>
-                                            <div class="product-button">
-                                                Add to card
+                                            <div class="product-label">
+                                                On Sale
                                             </div>
                                         </div>
-                                        <div class="product-label">On Sale</div>
-                                    </div>
-                                    <div class="product-cart">
-                                        <div class="product-img">
-                                            <img
-                                                src="./images/products/TNC Android Phone.png"
-                                                alt="Headphone" />
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-name">
-                                                TNC Android Phone
+                                    </a>
+                                    <a href="productDetail.html?id=2">
+                                        <div class="product-cart">
+                                            <div class="product-img">
+                                                <img
+                                                    src="./images/products/Digital Bluetooth Speaker.png"
+                                                    alt="Headphone" />
                                             </div>
-                                            <div class="product-vote">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="product-price">
-                                                <div
-                                                    class="product-price__discount">
-                                                    $ 110.00 USD
+                                            <div class="product-content">
+                                                <div class="product-name">
+                                                    Digital Bluetooth Speaker
                                                 </div>
-                                                <div
-                                                    class="_1px-width-divider"></div>
-                                                <div class="product-price__old">
-                                                    $ 130.00 USD
+                                                <div class="product-vote">
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
                                                 </div>
-                                            </div>
-                                            <div class="product-button">
-                                                Add to card
-                                            </div>
-                                        </div>
-                                        <div class="product-label">On Sale</div>
-                                    </div>
-                                    <div class="product-cart">
-                                        <div class="product-img">
-                                            <img
-                                                src="./images/products/TNC Android Watch.png"
-                                                alt="Headphone" />
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-name">
-                                                TNC Android Watch
-                                            </div>
-                                            <div class="product-vote">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="product-price">
-                                                <div
-                                                    class="product-price__discount">
-                                                    $ 125.00 USD
+                                                <div class="product-price">
+                                                    <div
+                                                        class="product-price__discount">
+                                                        $ 100.00 USD
+                                                    </div>
+                                                    <div
+                                                        class="_1px-width-divider"></div>
+                                                    <div
+                                                        class="product-price__old">
+                                                        $ 120.00 USD
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="_1px-width-divider"></div>
-                                                <div class="product-price__old">
-                                                    $ 135.00 USD
+                                                <div class="product-button">
+                                                    Add to card
                                                 </div>
                                             </div>
-                                            <div class="product-button">
-                                                Add to card
+                                            <div class="product-label">
+                                                On Sale
                                             </div>
                                         </div>
-                                        <div class="product-label">On Sale</div>
-                                    </div>
-                                    <div class="product-cart">
-                                        <div class="product-img">
-                                            <img
-                                                src="./images/products/TNC Gaming Laptop.png"
-                                                alt="Headphone" />
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-name">
-                                                TNC Gaming Laptop
+                                    </a>
+                                    <a href="productDetail.html?id=3">
+                                        <div class="product-cart">
+                                            <div class="product-img">
+                                                <img
+                                                    src="./images/products/TNC Android Phone.png"
+                                                    alt="Headphone" />
                                             </div>
-                                            <div class="product-vote">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <div class="product-price">
-                                                <div
-                                                    class="product-price__discount">
-                                                    $ 125.00 USD
+                                            <div class="product-content">
+                                                <div class="product-name">
+                                                    TNC Android Phone
                                                 </div>
-                                                <div
-                                                    class="_1px-width-divider"></div>
-                                                <div class="product-price__old">
-                                                    $ 135.00 USD
+                                                <div class="product-vote">
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="product-price">
+                                                    <div
+                                                        class="product-price__discount">
+                                                        $ 110.00 USD
+                                                    </div>
+                                                    <div
+                                                        class="_1px-width-divider"></div>
+                                                    <div
+                                                        class="product-price__old">
+                                                        $ 130.00 USD
+                                                    </div>
+                                                </div>
+                                                <div class="product-button">
+                                                    Add to card
                                                 </div>
                                             </div>
-                                            <div class="product-button">
-                                                Add to card
+                                            <div class="product-label">
+                                                On Sale
                                             </div>
                                         </div>
-                                        <div class="product-label">On Sale</div>
-                                    </div>
+                                    </a>
+                                    <a href="productDetail.html?id=4">
+                                        <div class="product-cart">
+                                            <div class="product-img">
+                                                <img
+                                                    src="./images/products/TNC Android Watch.png"
+                                                    alt="Headphone" />
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-name">
+                                                    TNC Android Watch
+                                                </div>
+                                                <div class="product-vote">
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="product-price">
+                                                    <div
+                                                        class="product-price__discount">
+                                                        $ 125.00 USD
+                                                    </div>
+                                                    <div
+                                                        class="_1px-width-divider"></div>
+                                                    <div
+                                                        class="product-price__old">
+                                                        $ 135.00 USD
+                                                    </div>
+                                                </div>
+                                                <div class="product-button">
+                                                    Add to card
+                                                </div>
+                                            </div>
+                                            <div class="product-label">
+                                                On Sale
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="productDetail.html?id=5">
+                                        <div class="product-cart">
+                                            <div class="product-img">
+                                                <img
+                                                    src="./images/products/TNC Gaming Laptop.png"
+                                                    alt="Headphone" />
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-name">
+                                                    TNC Gaming Laptop
+                                                </div>
+                                                <div class="product-vote">
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                    <i
+                                                        class="fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="product-price">
+                                                    <div
+                                                        class="product-price__discount">
+                                                        $ 125.00 USD
+                                                    </div>
+                                                    <div
+                                                        class="_1px-width-divider"></div>
+                                                    <div
+                                                        class="product-price__old">
+                                                        $ 135.00 USD
+                                                    </div>
+                                                </div>
+                                                <div class="product-button">
+                                                    Add to card
+                                                </div>
+                                            </div>
+                                            <div class="product-label">
+                                                On Sale
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

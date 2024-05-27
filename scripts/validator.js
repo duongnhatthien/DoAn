@@ -1,10 +1,14 @@
-const buttonSubmit = document.querySelector('.users-form-button');
-const buttonSend = document.querySelector('.submit-button');
-let cck = false;
-if (buttonSubmit) {
-    buttonSubmit.addEventListener('click', function (e) {
+const sendBtn = document.querySelector('#sendBtn');
+const registerBtn = document.querySelector('#registerBtn');
+const loginButton = document.querySelector('#loginBtn');
+console.log(loginButton);
+console.log(registerBtn);
+console.log(sendBtn);
+let cck = true;
+if (registerBtn) {
+    registerBtn.addEventListener('click', function (e) {
         e.preventDefault();
-        cck = false;
+        cck = true;
         Check({
             form: '.users-form',
             rules: [
@@ -16,17 +20,17 @@ if (buttonSubmit) {
                 Validator.isPasswordStrong('#password'),
             ],
         });
-        if (!cck) {
+        if (cck) {
             window.location.href = 'index.html';
         } else {
-            alert('Enter all input');
+            alert('Không được bỏ trống');
         }
     });
 }
-if (buttonSend) {
-    buttonSend.addEventListener('click', function (e) {
+if (sendBtn) {
+    sendBtn.addEventListener('click', function (e) {
         e.preventDefault();
-        cck = false;
+        cck = true;
         Check({
             form: '.contact-form__form',
             rules: [
@@ -39,10 +43,25 @@ if (buttonSend) {
                 Validator.isEmail('#email'),
             ],
         });
-        if (!cck) {
+        if (cck) {
             alert('Gửi thư thành công');
         } else {
-            alert('Enter all input');
+            alert('Không được bỏ trống');
+        }
+    });
+}
+if (loginButton) {
+    loginButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        cck = true;
+        Check({
+            form: '.users-form',
+            rules: [Validator.isEmail('#email', 'Email')],
+        });
+        if (cck) {
+            window.location.href = 'index.html';
+        } else {
+            alert('Đăng nhập thất bại');
         }
     });
 }
@@ -52,9 +71,16 @@ function Check(options) {
         options.rules.forEach((element) => {
             const inputElement = formElement.querySelector(element.selector);
             if (inputElement) {
+                const formMessage =
+                    inputElement.parentElement.querySelector('.form-message');
                 const messageError = element.test(inputElement.value);
                 if (messageError) {
-                    cck = true;
+                    formMessage.innerText = messageError;
+                    inputElement.classList.add('invalid');
+                    cck = false;
+                } else {
+                    formMessage.innerText = '';
+                    inputElement.classList.remove('invalid');
                 }
             }
         });
@@ -65,7 +91,6 @@ function Validator(options) {
     if (formElement) {
         options.rules.forEach((element) => {
             const inputElement = formElement.querySelector(element.selector);
-            console.log(inputElement);
             const formMessage =
                 inputElement.parentElement.querySelector('.form-message');
             if (inputElement) {

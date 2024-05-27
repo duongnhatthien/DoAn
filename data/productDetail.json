@@ -1,9 +1,52 @@
 [
     {
-        "name": "TNC Gaming Keyboard",
-        "price": "120.00",
+        "id": 1,
+        "name": "Gaming Headphone",
+        "imgDefault": "../images/products/TNC Gaming Headphone.png",
         "imgArray": [
-            
+            "../images/product-detail/product1/img1.png",
+            "../images/product-detail/product1/img2.png",
+            "../images/product-detail/product1/img3.png"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Digital Bluetooth Speaker",
+        "imgDefault": "../images/products/Digital Bluetooth Speaker.png",
+        "imgArray": [
+            "../images/product-detail/product2/img1.png",
+            "../images/product-detail/product2/img2.png",
+            "../images/product-detail/product2/img3.png"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Android Phone",
+        "imgDefault": "../images/products/TNC Gaming Headphone.png",
+        "imgArray": [
+            "../images/product-detail/product3/img1.png",
+            "../images/product-detail/product3/img2.png",
+            "../images/product-detail/product3/img3.png"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Android Watch",
+        "imgDefault": "../images/products/TNC Android Watch.png",
+        "imgArray": [
+            "../images/product-detail/product4/img1.png",
+            "../images/product-detail/product4/img2.png",
+            "../images/product-detail/product4/img3.png"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Gaming Laptop",
+        "imgDefault": "../images/products/TNC Gaming Laptop.png",
+        "imgArray": [
+            "../images/product-detail/product5/img1.png",
+            "../images/product-detail/product5/img2.png",
+            "../images/product-detail/product5/img3.png"
         ]
     }
 ]

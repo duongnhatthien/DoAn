@@ -39,7 +39,7 @@
         <div class="hide-in-destop slidebar-collapse">
             <div>
                 <div class="sliderbar-logo">
-                    <img src="/images/logo.png" alt="" />
+                    <img src="./images/logo.png" alt="" />
                 </div>
                 <div class="_1px-height-devider"></div>
                 <div class="slidebar_block">
@@ -165,7 +165,7 @@
             </div>
             <nav class="navbar">
                 <div class="container">
-                    <div class="row g-30">
+                    <div class="row g-30 align-items-center">
                         <div class="category-dropdown__button d-flex">
                             <div style="display: flex; gap: 12px">
                                 <img
@@ -253,22 +253,14 @@
                             </div>
                         </div>
 
-                        <div class="meun-button hide-in-destop">
-                            <i
-                                id="openMenuBtn"
-                                class="fa-solid fa-bars"
-                                style="display: block"></i>
-                            <i
-                                id="closeMenuBtn"
-                                class="fa-solid fa-xmark"
-                                style="display: none"></i>
-                        </div>
                         <div
                             class="_1px-width-divider hide-in-mobile hide-in-tablet"></div>
-                        <div class="navbar-menu hide-in-mobile hide-in-tablet">
+                        <div class="navbar-menu hide-in-mobile">
                             <ul class="nav-list">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Trang chủ</a>
+                                    <a href="index.html" class="nav-link">
+                                        Trang chủ
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">Giới thiệu</a>
@@ -292,7 +284,7 @@
                         <div
                             class="_1px-width-divider hide-in-mobile hide-in-tablet"></div>
                         <div
-                            class="d-flex navbar-wrapper-phone-and-email d-flex g-30 hide-in-mobile">
+                            class="d-flex navbar-wrapper-phone-and-email d-flex g-30 hide-in-mobile hide-in-tablet">
                             <div class="flex-row-with-7px-gap">
                                 <img
                                     src="./images/layout/phone-call 2.svg"
@@ -310,6 +302,16 @@
                                     Email: example@gmail.com
                                 </div>
                             </div>
+                        </div>
+                        <div class="meun-button hide-in-destop">
+                            <i
+                                id="openMenuBtn"
+                                class="fa-solid fa-bars"
+                                style="display: block"></i>
+                            <i
+                                id="closeMenuBtn"
+                                class="fa-solid fa-xmark"
+                                style="display: none"></i>
                         </div>
                     </div>
                 </div>
@@ -451,8 +453,8 @@
                                 </div>
                                 <div class="form-button-wrapper">
                                     <input
+                                        id="sendBtn"
                                         type="submit"
-                                        data-wait="Please wait..."
                                         class="submit-button"
                                         value="Gửi" />
                                 </div>

@@ -37,18 +37,6 @@ a {
     text-decoration: none; /* Bỏ gạch chân nếu muốn */
 }
 
-a:visited {
-    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
-}
-
-a:hover {
-    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
-}
-
-a:active {
-    color: inherit; /* Màu chữ kế thừa từ thẻ cha */
-}
-
 img {
     vertical-align: middle;
     max-width: 100%;
@@ -146,4 +134,7 @@ ul {
 }
 .pt-30 {
     padding-top: 30px !important;
+}
+.align-items-center {
+    align-items: center;
 }

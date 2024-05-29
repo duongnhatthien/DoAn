@@ -136,7 +136,7 @@ function getQueryParam(name, url = window.location.href) {
 function loadData() {
     const id = getQueryParam('id');
     console.log('Starting to load data...');
-    fetch('../data/productDetail.json')
+    fetch('data/productDetail.json')
         .then((res) => {
             if (!res.ok) {
                 throw new Error(

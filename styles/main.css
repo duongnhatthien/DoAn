@@ -315,8 +315,9 @@
 .slider-block {
     background-color: var(--secondary-color);
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    width: 1280px;
+    height: 500px;
+    margin: 0 auto;
     padding-left: 70px;
     padding-right: 70px;
     position: relative;
@@ -1116,6 +1117,8 @@
     }
     .slider-block {
         padding: 40px 50px;
+        width: 100%;
+        height: 100%;
     }
     .slider-img {
         width: 550px;
@@ -1166,6 +1169,8 @@
     /* slider */
     .slider-block {
         padding: 60px 20px;
+        width: 100%;
+        height: 100%;
     }
     .slider-description {
         flex: 1;
